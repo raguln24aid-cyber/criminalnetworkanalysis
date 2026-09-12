@@ -22,6 +22,29 @@ NEXUS-X is an AI-powered Criminal Network Analysis System built for the Ministry
 - Frontend: React, Vite, TailwindCSS, React Flow, Recharts
 - Backend: FastAPI, SQLAlchemy, SQLite, NetworkX, Groq SDK
 
+## Project Structure
+```
+nexus-x/
+├── backend/
+│   ├── app/
+│   │   ├── agents/        # Agent workflow/state machine for ingestion
+│   │   ├── api/           # FastAPI route handlers
+│   │   ├── evidence/      # Tamper-evident evidence ledger
+│   │   ├── models/        # SQLAlchemy ORM models
+│   │   ├── prompts/       # LLM prompt templates
+│   │   ├── schemas/       # Pydantic request/response schemas
+│   │   ├── security/      # Auth and request dependencies
+│   │   └── services/      # Graph, intelligence, extraction, and audit services
+│   ├── data/synthetic/    # Demo data generator
+│   └── scripts/           # Admin/ops scripts
+├── frontend/
+│   └── src/
+│       ├── api/           # API client
+│       ├── components/    # Shared UI (layout, sidebar)
+│       └── pages/         # Command center, network explorer, copilot, etc.
+└── deploy/                # Caddy config, VM/app setup scripts, deployment guide
+```
+
 ## Setup & Running Locally
 
 ### 1. Backend Setup
