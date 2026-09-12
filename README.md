@@ -85,5 +85,11 @@ GROQ_API_KEY="your_groq_api_key_here"
 GROQ_MODEL="llama3-8b-8192"
 ```
 
+## Roadmap
+- [ ] Role-based access control for multi-agency investigations
+- [ ] Export investigation reports (PDF) with the evidence chain attached
+- [ ] Real-time collaborative graph annotation
+- [ ] Support for additional LLM providers alongside Groq
+
 ## Notice
 AI-generated relationships are investigative leads, not proof of criminal activity. Final decisions require authorized human investigation and verification.
