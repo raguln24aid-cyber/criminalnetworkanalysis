@@ -1,0 +1,33 @@
+# Secrets - never commit real credentials
+backend/.env
+backend/*.env
+!backend/.env.example
+
+# Python
+backend/venv/
+backend/venv311/
+backend/__pycache__/
+backend/**/__pycache__/
+*.pyc
+
+# Local database and uploaded case files
+backend/nexus.db
+backend/uploads/
+backend/processed/
+backend/*.log
+backend/graph_result.json
+
+# Test fixtures / scratch files
+test-uploads/
+**/test-uploads/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/*.log
+frontend/.env.local
+
+# Editor/OS
+.vscode/
+.DS_Store
+Thumbs.db
