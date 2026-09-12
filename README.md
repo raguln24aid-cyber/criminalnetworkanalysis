@@ -85,6 +85,13 @@ GROQ_API_KEY="your_groq_api_key_here"
 GROQ_MODEL="llama3-8b-8192"
 ```
 
+## Testing
+```bash
+cd backend
+pip install -r requirements-dev.txt
+pytest
+```
+
 ## Roadmap
 - [ ] Role-based access control for multi-agency investigations
 - [ ] Export investigation reports (PDF) with the evidence chain attached
