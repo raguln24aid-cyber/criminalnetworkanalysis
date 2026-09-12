@@ -1,0 +1,25 @@
+# Caddy serves the built React app AND reverse-proxies /api to the backend
+# on the SAME origin - this means the browser never makes a cross-origin
+# request, so there's no CORS to configure or get wrong in production.
+# Caddy also handles HTTPS automatically (Let's Encrypt) once this points at
+# a real domain name.
+#
+# Replace the placeholder below with your actual domain, e.g.:
+#   nexus.yourdomain.com {
+# For a quick demo with no domain, use sslip.io with your VM's static IP:
+#   34-123-45-67.sslip.io {
+# (replace dots in the IP with dashes) - Caddy still gets you real HTTPS on that.
+
+YOUR_DOMAIN_OR_SSLIP_HOST {
+	root * /opt/nexus-x/frontend/dist
+	encode gzip
+
+	handle /api/* {
+		reverse_proxy 127.0.0.1:8000
+	}
+
+	handle {
+		try_files {path} /index.html
+		file_server
+	}
+}

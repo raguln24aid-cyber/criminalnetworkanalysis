@@ -1,0 +1,17 @@
+[Unit]
+Description=NEXUS-X FastAPI backend
+After=network.target docker.service
+Requires=docker.service
+
+[Service]
+Type=simple
+User=nexus
+WorkingDirectory=/opt/nexus-x/backend
+ExecStart=/opt/nexus-x/backend/venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000 --workers 2
+Restart=on-failure
+RestartSec=5
+# Reads /opt/nexus-x/backend/.env via python-dotenv at import time (see
+# app/config.py) - nothing secret goes in this unit file.
+
+[Install]
+WantedBy=multi-user.target
