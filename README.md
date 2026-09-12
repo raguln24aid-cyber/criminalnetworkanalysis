@@ -1,5 +1,9 @@
 # NEXUS-X
 
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Backend](https://img.shields.io/badge/backend-FastAPI-009688.svg)
+![Frontend](https://img.shields.io/badge/frontend-React%20%2B%20Vite-61DAFB.svg)
+
 **Neural Evidence & eXplainable Unified Surveillance Intelligence eXchange**
 
 "From fragmented evidence to explainable temporal intelligence."
