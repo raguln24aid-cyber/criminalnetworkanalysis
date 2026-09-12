@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0F172A;
+    /* Circuit-board mood from a CSS gradient grid, not an image file - zero
+       extra network requests, GPU-cheap to paint, stays fast on load. */
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(34,211,238,0.07), transparent 35%),
+      radial-gradient(circle at 85% 75%, rgba(236,72,153,0.06), transparent 35%),
+      linear-gradient(rgba(148,163,184,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148,163,184,0.05) 1px, transparent 1px);
+    background-size: auto, auto, 42px 42px, 42px 42px;
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-dark-800/80 backdrop-blur-md border border-dark-700/50 shadow-xl rounded-xl;
+  }
+
+  /* Subtle glowing edge for panels that should feel like the "active"
+     surface on a page (login card, key metric panels) - cheap box-shadow,
+     no blur filter, so it doesn't cost repaint performance like
+     backdrop-filter stacking would. */
+  .glow-edge {
+    box-shadow: 0 0 0 1px rgba(34,211,238,0.15), 0 0 40px rgba(59,130,246,0.12);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(96,165,250,0.5);
+  }
+}
