@@ -1,0 +1,29 @@
+# Python
+backend/venv/
+backend/venv311/
+backend/__pycache__/
+backend/**/__pycache__/
+**/*.pyc
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Local data / secrets
+backend/.env
+backend/*.env
+backend/nexus.db
+backend/uploads/
+backend/processed/
+backend/graph_result.json
+
+# VCS / editor
+.git/
+.github/
+.vscode/
+.editorconfig
+
+# Docs (not needed inside the image)
+README.md
+CONTRIBUTING.md
+CHANGELOG.md
