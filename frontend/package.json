@@ -14,7 +14,7 @@
     "clsx": "^2.1.0",
     "dagre": "^0.8.5",
     "framer-motion": "^11.0.8",
-    "lucide-react": "^0.344.0",
+    "lucide-react": "^1.43.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-flow-renderer": "^10.3.17",
